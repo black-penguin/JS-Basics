@@ -6,14 +6,20 @@ var name = 'Tyler';
 
   //Code Here
 
+  function isTyler(tName)
+  {
+    return (tName==="Tyler") ? true:false;
+  }
+
 //////////////////PROBLEM 2////////////////////
 
 
 //Create a function called getName that uses prompt() to prompt the user for their name, then returns the name.
 
-
-  //Code Here
-
+function getName(usrName)
+{
+  return prompt("Your Name:")
+}
 
 //////////////////PROBLEM 3////////////////////
 
@@ -23,6 +29,10 @@ var name = 'Tyler';
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
+  function welcome()
+  {
+    alert ("Welcome, "+getName());
+  }
 
 
 //////////////////PROBLEM 4////////////////////
@@ -33,6 +43,8 @@ var name = 'Tyler';
 //What is the difference between arguments and parameters?
 
   //Answer Here
+  //parameters are passed through a function
+  //the value of the parameters are parameters
 
 
 //////////////////PROBLEM 5////////////////////
@@ -43,7 +55,8 @@ var name = 'Tyler';
 
 
   //Answer Here
-
+ //falsy values - null, false, undefined, void, 0, NaN
+ //Boolean(parameter);
 
 
 //////////////////PROBLEM 6////////////////////
@@ -53,15 +66,18 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-  
+function myName()
+{
+  return "Austin";
+}
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
-
+  var newMyName=myName;
 //Now alert the result of invoking newMyName
-
+alert (newMyName);
 
 
 //////////////////PROBLEM 7////////////////////
@@ -71,9 +87,16 @@ var name = 'Tyler';
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
+  function outerFn()
+  {
+    return function()
+    {
+      return "Austin";
+    }
+  }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
-
+var innerFn=outerFn();
 //Now invoke innerFn.
